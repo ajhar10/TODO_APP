@@ -27,7 +27,8 @@ app.use("/js",express.static(path.resolve(__dirname, "assets/js")));
 
 
 app.get("/",(req,res)=>{
-    res.send("CRUD Application");
+    res.render("index");
+    // res.send("CRUD Application");
 })
 
 
