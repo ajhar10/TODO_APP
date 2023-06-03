@@ -1,0 +1,27 @@
+<!-- Header  -->
+<%-include("include/_header.ejs") %>
+
+<!-- Main  -->
+<main id="site-main">
+    <div class="container">
+        <div class="center">
+            <div class="box-nav d-flex justify-between">
+                <div class="filter">
+                    <a href="/">
+                        <i class="fa-solid fa-angles-left"></i>All Users
+                    </a>
+                </div>
+            </div>
+            <div class="text-center form-title">
+                <h2 class="text-dark">New User</h2>
+                <span class="text-light">Use The Below Form To Create A New User</span>
+            </div>
+
+            <!-- form handling -->
+            <%-include("include/_form.ejs")%>
+        </div>
+    </div>
+</main>
+
+<!-- Footer  -->
+<%-include("include/_footer.ejs") %>

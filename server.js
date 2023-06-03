@@ -31,6 +31,15 @@ app.get("/",(req,res)=>{
     // res.send("CRUD Application");
 })
 
+app.get("/add-user",(req,res)=>{
+    res.render("add_user");
+    // res.send("CRUD Application");
+})
+
+app.get("/update-user",(req,res)=>{
+    res.render("update_user");
+    // res.send("CRUD Application");
+})
 
 
 
