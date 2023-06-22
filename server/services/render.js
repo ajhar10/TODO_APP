@@ -1,7 +1,13 @@
 const express = require('express');
+const axios = require('axios');
 
 exports.homeRoutes = (req,res)=>{
-    res.render('index')
+    axios.get('http://localhost:5000/api/users')
+    .then(response=>{
+        console.log(response);
+        res.render('index',{users:response.data});
+    })
+    
 }
 
 exports.addUserRoutes = (req,res)=>{
