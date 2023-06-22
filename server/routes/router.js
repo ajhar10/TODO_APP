@@ -10,7 +10,7 @@ route.get("/update-user",updateUserRoutes)
 // API 
 route.post("/api/users",create)
 route.get("/api/users",find)
-route.put("/api/users",update)
-route.delete("/api/users",remove)
+route.put("/api/users/:id",update)
+route.delete("/api/users/:id",remove)
 
 module.exports =route
