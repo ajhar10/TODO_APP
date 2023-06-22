@@ -32,6 +32,20 @@ user
 
 //Retrive and Return All Users/a single user
 exports.find=(req,res)=>{
+    if(req.query.id){
+        const id    = req.query.id;
+        Userdb.findById(id)
+        .then(data=>{
+            if(!data){
+                res.status(404).send({message:"User Not Found with id " + id});
+            }else{
+                res.send(data)
+            }
+        })
+        .catch(error=>{
+            res.status(500).send({message:"User not valid with id :" + id})
+        })
+    }else{
     Userdb.find()
     .then(user=>{
         res.send(user);
@@ -41,7 +55,7 @@ exports.find=(req,res)=>{
             message:err.message || "Error Occured while retrieving user Information"
         })
     })
-
+    }
 }
 
 
